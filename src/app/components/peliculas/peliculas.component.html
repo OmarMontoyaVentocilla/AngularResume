@@ -1,0 +1,74 @@
+<p>peliculas works!</p>
+
+<p>Name</p>
+
+<input type="text" [value]="nombre">
+
+<p>Email</p>
+
+<input type="text">
+
+<hr>
+
+<button (click)="onSendForm()" >Sen Form</button>
+
+<hr>
+ {{defaultName}}
+ <input type="text" [value]="defaultName">
+ <br>
+<button (click)="onDefaultForm()">Default form</button>
+
+<br>
+
+<h1>suma</h1>
+
+<input type="text" #numero1>
+
+<input type="text"  #numero2 >
+
+{{resultado}}
+
+<button (click)="onSumaForm(numero1.value,numero2.value)">Suma form</button>
+
+<p>{{status}}</p>
+
+<br>
+<br>
+
+<div *ngIf="displayPassword; then showPswword; else hidePassword"></div>
+
+<ng-template #showPswword>
+muestro mi password 123456
+</ng-template>
+
+<ng-template #hidePassword>
+no muesttro nada
+</ng-template>
+
+<br>
+
+<div [ngSwitch]="lightStatus">
+   <div *ngSwitchCase = "'GREEN'">Verde</div>
+   <div *ngSwitchCase = "'RED'">Rojo</div>
+   <div *ngSwitchDefault>Verde</div>
+</div>
+
+<div *ngFor="let name of names">
+      <p>{{name}}</p>
+</div>
+
+<br>
+
+<div>
+   {{parentDataToChild}}
+</div>
+
+<div>CURSOS</div>
+
+<div *ngFor="let course of courses; let i = index">
+   <p>{{i+1}}{{'-'}}{{course.name}}</p>
+</div>
+
+{{errorMessage}}
+
+<button mat-raised-button color="primary">Primary</button>

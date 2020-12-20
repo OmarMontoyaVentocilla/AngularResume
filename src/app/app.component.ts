@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aprendiendoAngular';
+  dataToChildFromParent='Este mensaje es para peliculas component';
 }
