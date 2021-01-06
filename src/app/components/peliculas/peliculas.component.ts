@@ -14,6 +14,7 @@ export class PeliculasComponent implements OnInit {
   resultado:number;
   displayPassword=true;
   lightStatus="GREEN";
+  textoMostrar="hola mundo soy omar";
   names=['omar','montoya','ventocilla'];
 
   courses=[];
